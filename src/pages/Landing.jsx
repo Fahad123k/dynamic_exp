@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { GiVineFlower } from "react-icons/gi";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
     const [products, setProducts] = useState([]);  // Initialize as an empty array
@@ -24,11 +25,18 @@ const Landing = () => {
     return (
         <div className="bg-gray-100 min-h-screen">
             {/* Hero Section */}
-            <section className="icon-background flex bg-gray-100 text-white py-16 flex-col shadow">
-                <div className="container mx-auto text-center">
-                    <h1 className="text-4xl font-bold mb-4 text-gray-800">Welcome to Dynamic Express</h1>
+            <section className="flex bg-gray-100 text-white py-16 flex-col shadow justify-center text-center">
+                <div className="container mx-auto flex flex-col md:flex-row items-center justify-center space-x-6">
+                    <h1 className="text-4xl font-bold mb-4 text-gray-800 md:mb-0">Welcome to Dynamic Express</h1>
+                    <Link
+                        to="/login"
+                        className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300"
+                    >
+                        Login Now
+                    </Link>
                 </div>
             </section>
+
 
             {/* Featured Products */}
             <section className="py-8">
