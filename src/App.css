@@ -1,0 +1,55 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+/* Base styles for the button */
+.button {
+  display: inline-flex; /* Allows for vertical and horizontal centering */
+  width: 100px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  padding: 0.5em 1em; /* Adjust padding for button size */
+  border: none; /* Remove default border */
+  background-color: #3498db; /* Default background color */
+  color: white; /* Default text color */
+  font-size: 1em; /* Font size for button text */
+  text-align: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  border-radius: 4px; /* Rounded corners */
+  transition: filter 300ms, background-color 300ms; /* Transition for hover effect */
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+/* Hover state for the button */
+.button:hover {
+  background-color: #2980b9; /* Darker background color on hover */
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* React-specific hover state */
+.button.react:hover {
+  background-color: #61dafb; /* Background color for react variant */
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Optional: Styling for button focus state */
+.button:focus {
+  outline: 2px solid #3498db; /* Outline color for focus state */
+  outline-offset: 2px; /* Offset the focus outline */
+}
+
+/* Optional: Button text styling */
+.button span {
+  display: block; /* Allow span to take up the full space of the button */
+  color: inherit; /* Use the button's text color */
+}
+
+.container{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
