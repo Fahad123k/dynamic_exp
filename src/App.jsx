@@ -10,6 +10,9 @@ import Landing from './pages/Landing';
 import Footer from './components/Footer';
 import {ToastContainer} from'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import NotFound from './pages/NotFound';
 
 function App() {
   const count=useSelector((state)=>state.counter.value)
@@ -35,8 +38,11 @@ function App() {
 
     <Route path="/" element={ <Landing/>} />
     <Route path="/home" element={ <Home/>} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/register" element={<Register />} />
     <Route path="/favourite" element={ <Favourite/>} />
     <Route path="/product/:id" element={ <Product/>} />
+    <Route path="*" element={<NotFound />} /> 
     </Routes>
     <Footer/>
     {/* <Count/> */}
